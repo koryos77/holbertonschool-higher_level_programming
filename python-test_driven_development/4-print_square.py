@@ -3,7 +3,8 @@
 This module provides a function `print_square` that prints a square.
 
 The function takes a value, and prints a square.
-It raises a TypeError if the inputs are not strings, or a ValueError if the size us 0.
+It raises a TypeError if the inputs are not strings,
+or a ValueError if the size us 0.
 """
 
 
@@ -22,6 +23,6 @@ def print_square(size):
         raise TypeError("size must be an integer")
     if size < 0:
         raise ValueError("size must be >= 0")
-    
+
     for _ in range(size):
         print("#" * size)
