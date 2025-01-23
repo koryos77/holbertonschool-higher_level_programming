@@ -57,6 +57,3 @@ TypeError: a must be an integer
 >>> import sys
 >>> add_integer(sys.maxsize, 1)
 9223372036854775808
-
-# Test with Python's minimum integer
->>> add_int
