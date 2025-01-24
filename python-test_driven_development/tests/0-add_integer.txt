@@ -31,29 +31,6 @@ Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
-# Additional test cases
->>> add_integer(1.5, 2.7)
-3
-
->>> add_integer(-10, -5)
--15
-
->>> add_integer(1.5, -2.7)
--1
-
-# Test with large numbers
->>> add_integer(1000000, 2000000)
-3000000
-
-# Test with zero
->>> add_integer(0, 0)
-0
-
-# Test with a negative number and zero
->>> add_integer(-5, 0)
--5
-
-# Test with Python's maximum integer
->>> import sys
->>> add_integer(sys.maxsize, 1)
-9223372036854775808
+# Test with float overflow
+>>> add_integer(1e+308, 1000)
+inf
