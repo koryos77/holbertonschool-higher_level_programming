@@ -32,5 +32,7 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 
 # Test with float overflow
->>> add_integer(inf, inf)
-inf
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+    ...
+OverflowError: float overflow
