@@ -55,7 +55,7 @@ Traceback (most recent call last):
 TypeError: size must be an integer
 
 # Test with very large number
->>> print_square(1000)  # This will print a very large square, output not shown here
+>>> print_square(100000000)
 
 # Test with negative float
 >>> print_square(-4.5)
