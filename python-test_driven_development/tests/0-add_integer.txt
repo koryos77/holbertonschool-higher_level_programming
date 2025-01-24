@@ -32,5 +32,5 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 
 # Test with float overflow
->>> add_integer(1e+308, 1e+308)
+>>> add_integer(inf, inf)
 inf
