@@ -25,7 +25,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty_list(self):
         """Test in an empty list"""
         result = max_integer([])
-        self.assertEqual(result)
+        self.assertIsNone(result)
 
     def test_negative_numbers(self):
         """Test in a list of negative number"""
@@ -39,7 +39,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_mixed_numbers(self):
         """Test with integers and floats"""
-        result = max_integer([5, 3.5, 6; 7.5])
+        result = max_integer([5, 3.5, 6, 7.5])
         self.assertEqual(result, 7.5)
 
 if __name__ == '__main__':
