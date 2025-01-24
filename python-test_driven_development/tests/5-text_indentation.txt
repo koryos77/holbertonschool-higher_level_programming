@@ -12,7 +12,6 @@ How are you?
 I'm fine:
 <BLANKLINE>
 thanks.
-
 # Test with no punctuation
 >>> text_indentation("This is a test")
 This is a test
@@ -36,7 +35,6 @@ Yes:
 :
 <BLANKLINE>
 :
-
 # Test with spaces before and after punctuation
 >>> text_indentation("  Hello  .  How  ?  Are  :  You  ")
 Hello.
