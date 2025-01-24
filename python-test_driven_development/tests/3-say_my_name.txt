@@ -34,3 +34,9 @@ My name is
 # Test with special characters
 >>> say_my_name("John!", "@Smith")
 My name is John! @Smith
+
+# Test with two arguments missing
+>>> say_my_name()
+Traceback (most recent call last):
+    ...
+TypeError: Missing last_name and first_name
