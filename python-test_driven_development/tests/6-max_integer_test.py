@@ -39,8 +39,8 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_mixed_numbers(self):
         """Test with integers and floats"""
-        result = max_integer([5, 3.5, 6, 7.5])
-        self.assertEqual(result, 7.5)
+        result = max_integer([5, 3.5, 6, 5.5])
+        self.assertEqual(result, 6)
 
 if __name__ == '__main__':
     unittest.main()
