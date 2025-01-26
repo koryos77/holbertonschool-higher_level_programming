@@ -40,6 +40,11 @@
 >>> print(matrix_divided(matrix, 3))
 [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 
+# Test division by infinity:
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> print(matrix_divided(matrix, float('inf')))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
 # Test with no arguments:
 >>> matrix_divided()
 Traceback (most recent call last):
