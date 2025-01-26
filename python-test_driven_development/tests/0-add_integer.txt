@@ -19,11 +19,21 @@
 >>> add_integer(100.3, -2)
 98
 
+# Test with two floats
+>>> add_integer(3.2, 2.6)
+5
+
 # Test with invalid input (string)
 >>> add_integer(4, "School")
 Traceback (most recent call last):
     ...
 TypeError: b must be an integer
+
+# Test with invalid input (string)
+>>> add_integer("Best", "4")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
 
 # Test with None
 >>> add_integer(None)
@@ -31,8 +41,20 @@ Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
+# Test without arguments
+>>> add_integer()
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
 # Test with float overflow
->>> add_integer(float('inf'))
+>>> add_integer(float('inf'), 0)
 Traceback (most recent call last):
     ...
 OverflowError: float overflow
+
+# Test with float NaN
+>>> add_integer(float('nan'), 0)
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
