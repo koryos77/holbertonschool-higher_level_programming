@@ -12,9 +12,12 @@ How are you?
 I'm fine:
 <BLANKLINE>
 thanks.
+<BLANKLINE>
+
 # Test with no punctuation
 >>> text_indentation("This is a test")
 This is a test
+<BLANKLINE>
 
 # Test with multiple consecutive punctuation marks
 >>> text_indentation("Hello... World??? Yes:::")
@@ -35,6 +38,8 @@ Yes:
 :
 <BLANKLINE>
 :
+<BLANKLINE>
+
 # Test with spaces before and after punctuation
 >>> text_indentation("  Hello  .  How  ?  Are  :  You  ")
 Hello.
@@ -44,6 +49,7 @@ How?
 Are:
 <BLANKLINE>
 You
+<BLANKLINE>
 
 # Test with non-string input
 >>> text_indentation(12345)
