@@ -61,6 +61,12 @@ Traceback (most recent call last):
     ...
 TypeError: size must be an integer
 
+# Test with missing argument:
+>>> print_square()
+Traceback (most recent call last):
+    ...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
 # Test with negative float
 >>> print_square(-4.5)
 Traceback (most recent call last):
