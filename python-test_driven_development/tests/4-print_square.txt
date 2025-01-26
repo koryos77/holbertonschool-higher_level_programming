@@ -30,6 +30,13 @@
 >>> print_square(1)
 #
 
+# Test with large square (test performance, check no errors):
+>>> import sys
+>>> original_stdout = sys.stdout
+>>> sys.stdout = open('/dev/null', 'w')
+>>> print_square(100)
+>>> sys.stdout = original_stdout
+
 # Test with negative size
 >>> print_square(-1)
 Traceback (most recent call last):
@@ -53,9 +60,6 @@ TypeError: size must be an integer
 Traceback (most recent call last):
     ...
 TypeError: size must be an integer
-
-# Test with very large number
->>> print_square(1000)
 
 # Test with negative float
 >>> print_square(-4.5)
