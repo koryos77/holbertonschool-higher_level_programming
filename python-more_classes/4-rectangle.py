@@ -33,6 +33,16 @@ class Rectangle:
         self.width = width
         self.height = height
 
+    def __str__(self):
+        """
+        Method to print the rectangle
+        If width or height equal zero then print an empty line
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        rect = ("#" * self.__width + '\n') * self.__height
+        return rect
+
     @property
     def width(self):
         """
@@ -98,15 +108,6 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width + self.__height) * 2
-
-    def __str__(self):
-        """
-        Method to print the rectangle
-        If width or height equal zero then print an empty line
-        """
-        if self.width == 0 or self.__height == 0:
-            return ""
-        return "\n".join(["#" * self.__width] * self.__height)
 
     def __repr__(self):
         """
