@@ -115,4 +115,5 @@ class Rectangle:
         """
         Method to understand the object
         """
-        return f"Rectangle(width={self.__width}, height={self.__height})"
+        return ("{}({}, {})".format(__class__.__name__,
+                self.__width, self.__height))
