@@ -3,18 +3,16 @@
 Module that defines a class Rectangle
 """
 
-
 class Rectangle:
     """
     Class Rectangle.
-
     Arguments:
         __width (int): width of the rectangle
-        __ height (int): height of the rectangle
+        __height (int): height of the rectangle
 
     Method:
         __init__(self, width=0, height=0): Initialize the width and height
-        of the rectangle
+        of the rectangle.
         width (property): getter for the width
         height (property): getter for the height
         width (property setter): setter for the width
@@ -34,8 +32,8 @@ class Rectangle:
 
     def __str__(self):
         """
-        Method to print the rectangle
-        If width or height equal zero then print an empty line
+        Method to print the rectangle with `#` character.
+        If width or height equals zero, return an empty string.
         """
         if self.__width == 0 or self.__height == 0:
             return ""
@@ -106,7 +104,7 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return 0
-        return (self.__width * 2) + (self.__height * 2)
+        return 2 * (self.__width + self.__height)
 
     def __repr__(self):
         """
