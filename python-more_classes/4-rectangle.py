@@ -104,9 +104,12 @@ class Rectangle:
         Method to print the rectangle
         If width or height equal zero then print an empty line
         """
-        if self.width == 0 or self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join(["#" * self.__width] * self.__height)
+        rect = []
+        for _ in range(self.__height):
+            rect.append("#" * self.__width)
+        return "\n".join(rect)
 
     def __repr__(self):
         """
