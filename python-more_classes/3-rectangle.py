@@ -8,7 +8,6 @@ class Rectangle:
     """
     Class Rectangle.
 
-
     Arguments:
         __width (int): width of the rectangle
         __ height (int): height of the rectangle
@@ -40,8 +39,8 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        rect = (("#" * self.__width) + '\n') * self.__height
-        return rect[:1]
+        rect = ("#" * self.__width + '\n') * self.__height
+        return rect
 
     @property
     def width(self):
@@ -108,3 +107,9 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
+
+    def __repr__(self):
+        """
+        Returns a string representation of the rectangle
+        """
+        return f"Rectangle({self.__width}, {self.__height})"
