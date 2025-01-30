@@ -58,7 +58,8 @@ class Node:
     @next_node.setter
     def next_node(self, value):
         """
-        Sets the next node for the current node, ensuring it's either None or a Node.
+        Sets the next node for the current node,
+        ensuring it's either None or a Node.
 
         Args:
             value (Node or None): The next node to link to.
@@ -76,7 +77,8 @@ class SinglyLinkedList:
     Class that defines a singly linked list.
 
     Attributes:
-        head (Node or None): The first node in the list, or None if the list is empty.
+        head (Node or None): The first node in the list,
+        or None if the list is empty.
     """
 
     def __init__(self):
@@ -110,8 +112,6 @@ class SinglyLinkedList:
         after the insertion.
         """
         new_node = Node(value)
-
-
         if self.head is None or self.head.data >= value:
             new_node.next_node = self.head
             self.head = new_node
