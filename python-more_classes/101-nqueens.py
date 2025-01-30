@@ -1,10 +1,15 @@
 #!/usr/bin/python3
+"""
+Module that defines a class Square.
+This module contains the definition of Square with attribute 'size'
+"""
 import sys
+
 
 def is_safe(board, row, col, N):
     """
     Check if it's safe to place a queen on the board at position (row, col).
-    It checks the row, the upper diagonal, and the lower diagonal for conflicts.
+    Checks the row, the upper diagonal, and the lower diagonal for conflicts.
     """
     for i in range(row):
         # Check column conflict
@@ -17,6 +22,7 @@ def is_safe(board, row, col, N):
         if board[i][1] + i == col + row:
             return False
     return True
+
 
 def solve_nqueens(N, board, row):
     """
@@ -33,12 +39,15 @@ def solve_nqueens(N, board, row):
             solve_nqueens(N, board, row + 1)
             board.pop()
 
+
 def nqueens(N):
     """
-    Main function to solve the N queens problem by calling the backtracking function.
+    Main function to solve the N queens problem
+    by calling the backtracking function.
     """
     board = []
     solve_nqueens(N, board, 0)
+
 
 def main():
     if len(sys.argv) != 2:
@@ -56,6 +65,7 @@ def main():
         sys.exit(1)
 
     nqueens(N)
+
 
 if __name__ == "__main__":
     main()
