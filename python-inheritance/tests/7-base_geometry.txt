@@ -1,0 +1,24 @@
+Test 1: Valid integer input
+--------------------------------
+Input: integer_validator("my_int", 12)
+Expected Output: No exception (Valid integer)
+
+Test 2: Valid integer input
+--------------------------------
+Input: integer_validator("width", 89)
+Expected Output: No exception (Valid integer)
+
+Test 3: Invalid input - string instead of integer
+--------------------------------
+Input: integer_validator("name", "John")
+Expected Output: TypeError: name must be an integer
+
+Test 4: Invalid input - value is 0
+--------------------------------
+Input: integer_validator("age", 0)
+Expected Output: ValueError: age must be greater than 0
+
+Test 5: Invalid input - negative integer
+--------------------------------
+Input: integer_validator("distance", -4)
+Expected Output: ValueError: distance must be greater than 0
