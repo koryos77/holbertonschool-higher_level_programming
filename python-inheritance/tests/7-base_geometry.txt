@@ -1,24 +1,29 @@
-Test 1: Valid integer input
---------------------------------
-Input: integer_validator("my_int", 12)
-Expected Output: No exception (Valid integer)
+#!/usr/bin/python3
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Test 2: Valid integer input
---------------------------------
-Input: integer_validator("width", 89)
-Expected Output: No exception (Valid integer)
+bg = BaseGeometry()
 
-Test 3: Invalid input - string instead of integer
---------------------------------
-Input: integer_validator("name", "John")
-Expected Output: TypeError: name must be an integer
+# Test 1: Valid integer input
+# This should not raise any exceptions.
+>>> bg.integer_validator("my_int", 12)
+Test 1 passed: Valid integer input
 
-Test 4: Invalid input - value is 0
---------------------------------
-Input: integer_validator("age", 0)
-Expected Output: ValueError: age must be greater than 0
+# Test 2: Valid integer input (another case)
+# This should also not raise any exceptions.
+>>> bg.integer_validator("width", 89)
+Test 2 passed: Valid integer input
 
-Test 5: Invalid input - negative integer
---------------------------------
-Input: integer_validator("distance", -4)
-Expected Output: ValueError: distance must be greater than 0
+# Test 3: Invalid input (string instead of integer)
+# This should raise a TypeError: "name must be an integer"
+>>> bg.integer_validator("name", "John")
+Test 3 passed: TypeError: name must be an integer
+
+# Test 4: Invalid input (integer less than or equal to 0)
+# This should raise a ValueError: "age must be greater than 0"
+>>> bg.integer_validator("age", 0)
+Test 4 passed: ValueError: age must be greater than 0
+
+# Test 5: Invalid input (negative integer)
+# This should raise a ValueError: "distance must be greater than 0"
+>>> bg.integer_validator("distance", -4)
+Test 5 passed: ValueError: distance must be greater than 0
