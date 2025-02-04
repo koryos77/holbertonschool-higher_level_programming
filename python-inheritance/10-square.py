@@ -12,7 +12,7 @@ class Square(Rectangle):
     def __init__(self, size):
         """
         Instantiation with size
-        
+
         arguments:
             _size(int): Positive integer of the size of the square
         """

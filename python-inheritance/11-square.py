@@ -12,7 +12,7 @@ class Square(Rectangle):
     def __init__(self, size):
         """
         Instantiation with size
-        
+
         arguments:
             _size(int): Positive integer of the size of the square
         """
@@ -25,7 +25,7 @@ class Square(Rectangle):
         Public instance method that returns the area of the square.
         """
         return self.__size * self.__size
-    
+
     def __str__(self):
         """
         Return a string representation of the Square.
