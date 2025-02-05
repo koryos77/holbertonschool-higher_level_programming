@@ -60,6 +60,9 @@ class Rectangle(Shape):
     Concrete class Rectangle that inherits from shape
     """
     def __init__(self, width, height):
+        """
+        Initialization with width and height
+        """
         self.width = width
         self.height = height
 
@@ -70,6 +73,9 @@ class Rectangle(Shape):
         return self.width * self.height
 
     def perimeter(self):
+        """
+        Perimeter method for rectangle
+        """
         return 2 * (self.width + self.height)
 
 
