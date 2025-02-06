@@ -1,61 +1,71 @@
 #!/usr/bin/python3
-"""
-Class FlyingFish that inherits both from fish class and bird class
-"""
 
 
 class Fish:
     """
-    Fish class with swim and habitat methods
+    Represents a fish with the ability to swim and a defined habitat.
     """
     def swim(self):
         """
-        Method that indicates that the fish is swimming
+        Prints a message indicating that the fish is swimming.
         """
         print("The fish is swimming")
 
     def habitat(self):
         """
-        Method that indicates that the fish lives in the water
+        Prints a message indicating the habitat of the fish.
         """
         print("The fish lives in water")
 
+
 class Bird:
     """
-    Bird class with fly and habitat methods
+    Represents a bird with the ability to fly and a defined habitat.
     """
+
     def fly(self):
         """
-        Method that indicates that the bird is flying
+        Prints a message indicating that the bird is flying.
         """
         print("The bird is flying")
 
     def habitat(self):
         """
-        Method that indicates that the bird lives in the sky
+        Prints a message indicating the habitat of the bird.
         """
         print("The bird lives in the sky")
 
+
 class FlyingFish(Fish, Bird):
     """
-    FlyingFish class that inherits from both Fish and Bird.
-    Class that overides methods from the parents to define unique behaviors for
-    swimming, flying, and habitat.
+    Represents a flying fish, which inherits
+    characteristics from both Fish and Bird.
+
+    This class overrides methods from its parent
+    classes to define unique behaviors
+    for swimming, flying, and its habitat.
     """
     def fly(self):
         """
-        Method that indicates that the flying fish is soaring
+        Prints a message indicating that the flying fish is soaring.
+
+        Overrides the `fly` method from the Bird class.
         """
         print("The flying fish is soaring!")
 
     def swim(self):
         """
-        Method that indicates that the flying fish is swimming
+        Prints a message indicating that the flying fish is swimming.
+
+        Overrides the `swim` method from the Fish class.
         """
         print("The flying fish is swimming!")
 
     def habitat(self):
         """
-        Method that indicates that flying fish lives both in water and sky
+        Prints a message indicating that the flying fish lives
+        both in water and in the sky.
+
+        Overrides the `habitat` method from both Fish and Bird classes.
         """
-        print("The flying fish lives both in water and sky!")
+        print("The flying fish lives both in water and the sky!")
