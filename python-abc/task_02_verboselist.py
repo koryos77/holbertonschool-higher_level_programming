@@ -32,14 +32,11 @@ class VerboseList(list):
         print(f"Removed [{item}] from the list.")
         super().remove(item)
 
-    def pop(self, index=None):
+    def pop(self, index=-1):
         """
         Method to remove an item from the list by the index
         (or the last one if no index given)
         """
-        if index is None:
-            item = super().pop()
-            print(f"Popped [{item}] from the list.")
-        else:
-            item = super().pop(index)
-            print(f"Popped [{item}] from the list.")
+        item = super().pop(index)
+        print(f"Popped [{item}] from the list.")
+        return item
