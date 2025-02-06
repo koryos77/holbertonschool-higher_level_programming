@@ -57,8 +57,3 @@ class FlyingFish(Fish, Bird):
         Method that indicates that flying fish lives both in water and sky
         """
         print("The flying fish lives both in water and sky!")
-
-flying_fish = FlyingFish()
-flying_fish.swim()
-flying_fish.fly()
-flying_fish.habitat()
