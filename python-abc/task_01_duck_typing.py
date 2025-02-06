@@ -40,7 +40,7 @@ class Circle(Shape):
         Argument:
             _radius: the radius of the circle
         """
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         """
@@ -81,7 +81,10 @@ class Rectangle(Shape):
 
 def shape_info(shape):
     """
-    Function shape_info relying on duck typing
+    Function shape_info relying on duck typing to call area() and perimeter() methods.
+
+    Argument:
+        _shape: shape of the circle and rectangle
     """
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")

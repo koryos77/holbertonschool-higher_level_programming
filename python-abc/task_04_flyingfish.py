@@ -38,7 +38,9 @@ class Bird:
 
 class FlyingFish(Fish, Bird):
     """
-    FlyingFish class that inherits from both Fish and Bird
+    FlyingFish class that inherits from both Fish and Bird.
+    Class that overides methods from the parents to define unique behaviors for
+    swimming, flying, and habitat.
     """
     def fly(self):
         """
