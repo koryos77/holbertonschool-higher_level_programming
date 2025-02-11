@@ -14,9 +14,4 @@ def class_to_json(obj):
     Returns:
         Dictionary description with simple data structure
     """
-    dictionary = {}
-
-    for key, value in obj.__dict__.items():
-        if isinstance(value, (str, int, bool, list, dict)):
-            dictionary[key] = value
-    return dictionary
+    return obj.__dict__

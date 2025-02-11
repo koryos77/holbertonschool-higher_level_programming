@@ -8,11 +8,11 @@ def write_file(filename="", text=""):
     the number of character written.
 
     Arguments:
-        filename: the file we'll take the strinfg from
+        filename: the file we'll take the string from
         text: the string we'll write
 
     Returns:
         The number of character written.
     """
     with open(filename, "w", encoding="utf-8") as file:
-        return len(text)
+        return file.write(text)
