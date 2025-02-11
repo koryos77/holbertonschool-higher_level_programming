@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module for reading a text file"""
 
 
 def pascal_triangle(n):

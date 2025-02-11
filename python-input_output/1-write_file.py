@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module for reading a text file"""
 
 
 def write_file(filename="", text=""):
