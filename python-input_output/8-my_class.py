@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-""" 
+"""
 My class module
 """
 
+
 class MyClass:
-    """ 
+    """
     My class
     """
 
@@ -20,4 +21,3 @@ class MyClass:
         str function
         """
         return "[MyClass] {} - {:d}".format(self.name, self.number)
-    

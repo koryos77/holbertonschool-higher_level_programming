@@ -5,12 +5,12 @@
 class Student:
     """
     Class Student
-    
+
     Takes as public instance attributes:
         first_name
         last_name
         age
-    
+
     Public method: def to_json(self): that retrieves a dict
     representation of a Student instance
     """
@@ -30,7 +30,7 @@ class Student:
         Otherwise, all attributes must be retrieved.
         """
         if attrs is None:
-            return{
+            return {
                 'first_name': self.first_name,
                 'last_name': self.last_name,
                 'age': self.age
