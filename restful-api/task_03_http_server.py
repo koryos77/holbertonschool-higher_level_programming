@@ -52,7 +52,8 @@ class SimpleAPI(http.server.BaseHTTPRequestHandler):
             self.wfile.write(b"Endpoint not found")
 
 
-def run_server(port=8000):
+def run_server(server_class=http.server.HTTPServer,
+               handler_class=SimpleAPI, port=8000):
     """
     Run the HTTP server
 
@@ -60,7 +61,7 @@ def run_server(port=8000):
         port: default port: 8000
     """
     server_address = ('', port)
-    httpd = http.server.HTTPServer(server_address, SimpleAPI)
+    httpd = server_class(server_address, handler_class)
     print(f"Server running on port {port}")
     httpd.serve_forever()
 
