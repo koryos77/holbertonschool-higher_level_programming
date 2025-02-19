@@ -37,7 +37,7 @@ def verify_password(username, password):
         None otherwise.
     """
     if username in users and check_password_hash(
-        users[username]["password"], password):
+            users[username]["password"], password):
         return username
     return None
 
