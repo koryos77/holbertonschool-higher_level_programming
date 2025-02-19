@@ -35,7 +35,7 @@ class SimpleAPI(http.server.BaseHTTPRequestHandler):
             data_info = {
                 "status": "OK"
             }
-            self.wfile.write(json.dumps(data_info).encode('utf-8'))
+            self.wfile.write(b"OK")
         elif self.path == '/info':
             self.send_response(200)
             self.send_header('Content-type', 'application/json')
