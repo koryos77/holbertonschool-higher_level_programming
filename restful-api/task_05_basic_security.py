@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 from flask import Flask, jsonify, request
 from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -38,9 +36,9 @@ def verify_password(username, password):
         dict or None: The user dictionary if credentials are valid,
         None otherwise.
     """
-    user = users.get(username)
-    if user and check_password_hash(user['password'], password):
-        return user
+    if username in users and check_password_hash(
+        users[username]["password"], password):
+        return username
     return None
 
 
@@ -65,13 +63,23 @@ def login():
         flask.Response: JSON response with access token or error message.
     """
     data = request.get_json()
-    username = data.get('username')
-    password = data.get('password')
-    user = users.get(username)
-    if user and check_password_hash(user['password'], password):
-        access_token = create_access_token(identity={'username': username,
-                                                     'role': user['role']})
-        return jsonify(access_token=access_token)
+
+    if not data or 'username' not in data or 'password' not in data:
+        return jsonify({"error": "Invalid username or password"}), 401
+
+    username = data['username']
+    password = data['password']
+
+    if username in users and check_password_hash(
+            users[username]["password"], password):
+        access_token = create_access_token(
+            identity={
+                "username": username,
+                "role": users[username]["role"]
+            }
+        )
+        return jsonify({"access_token": access_token})
+
     return jsonify({"error": "Invalid credentials"}), 401
 
 
