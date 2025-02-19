@@ -47,7 +47,7 @@ class SimpleAPI(http.server.BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(data_info).encode('utf-8'))
         else:
             self.send_response(404)
-            self.send_header('Content-type', 'text/plain')
+            self.send_header('Content-type', 'application/json')
             self.end_headers()
             self.wfile.write(b"Endpoint not found")
 
