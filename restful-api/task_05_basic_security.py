@@ -6,7 +6,7 @@ from flask_jwt_extended import (JWTManager, create_access_token,
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
-app.config['JWT_SECRET_KEY'] = 'your_jwt_secret_key'
+app.config["JWT_SECRET_KEY"] = "your_jwt_secret_key"
 jwt = JWTManager(app)
 
 users = {
@@ -107,7 +107,7 @@ def admin_only():
     current_user = get_jwt_identity()
     if current_user['role'] != 'admin':
         return jsonify({"error": "Admin access required"}), 403
-    return "Admin access: Granted"
+    return "Admin Access: Granted"
 
 
 @jwt.unauthorized_loader
@@ -153,4 +153,4 @@ def handle_expired_token_error(header, payload):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=5000)
