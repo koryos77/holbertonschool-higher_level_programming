@@ -51,7 +51,7 @@ def basic_protected():
     Returns:
         str: A message indicating successful access.
     """
-    return "Basic Auth: Access Granted"
+    return "Basic Auth: Access Granted."
 
 
 @app.route('/login', methods=['POST'])
@@ -92,7 +92,7 @@ def jwt_protected():
     Returns:
         str: A message indicating successful access.
     """
-    return "JWT Auth: Access Granted"
+    return "JWT Auth: Access Granted."
 
 
 @app.route('/admin-only')
@@ -107,7 +107,7 @@ def admin_only():
     current_user = get_jwt_identity()
     if current_user['role'] != 'admin':
         return jsonify({"error": "Admin access required"}), 403
-    return "Admin access: Granted"
+    return "Admin Access: Granted."
 
 
 @jwt.unauthorized_loader
