@@ -32,10 +32,11 @@ if __name__ == "__main__":
     session = Session()
 
     # Deletes all the states with the letter 'a'
-    session.query(State).filter(State.name.like('%a%')).delete(synchronize_session=False)
+    session.query(State).filter(State.name.like(
+        '%a%')).delete(synchronize_session=False)
 
     # Confirm the update
     session.commit()
-    
+
     # Close session
     session.close()
