@@ -1,4 +1,4 @@
-#!/usr/python3
+#!/usr/bin/python3
 """
 Prints all City objects from db hbtn_0e_14_usa
 """
