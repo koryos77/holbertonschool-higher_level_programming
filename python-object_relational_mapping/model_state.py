@@ -7,8 +7,9 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
 
-#Instance of Base
+# Instance of Base
 Base = declarative_base()
+
 
 # Class State with base as inheritance
 class State(Base):
