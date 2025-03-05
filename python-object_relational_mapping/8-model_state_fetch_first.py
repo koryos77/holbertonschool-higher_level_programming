@@ -1,4 +1,4 @@
-#!/home/koryos/myenv/bin/python3
+#!/usr/bin/python3
 """
 Prints the first STate object from the db hbtn_0e_6_usa
 """
