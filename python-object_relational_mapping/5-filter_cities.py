@@ -1,4 +1,4 @@
-#!/home/koryos/myenv/bin/python3
+#!/usr/bin/python3
 """
 Script that takes in the name of a state as an argument
 and lists all cities of that state, using db hbtn_0e_4_usa
