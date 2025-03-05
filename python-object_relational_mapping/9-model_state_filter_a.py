@@ -32,7 +32,8 @@ if __name__ == "__main__":
     session = Session()
 
     # Retrieve the first object State by id
-    states = session.query(State).filter(State.name.like('%a%')).order_by(State.id.asc()).all()
+    states = session.query(State).filter(State.name.like(
+        '%a%')).order_by(State.id.asc()).all()
 
     # Print result
     for state in states:
