@@ -35,7 +35,7 @@ if __name__ == "__main__":
     new_state = State(name="Louisiana")
     session.add(new_state)
 
-    #Add to the base
+    # Add to the base
     session.commit()
 
     # Print result
