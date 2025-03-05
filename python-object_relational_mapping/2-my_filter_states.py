@@ -10,7 +10,8 @@ import MySQLdb
 if __name__ == "__main__":
     # Verification of all required arguments
     if len(sys.argv) != 5:
-        print("Usage: {} <mysql username> <mysql password> <database name> <state name searched>"
+        print("Usage: {} <mysql username> <mysql password> <database name>\
+              <state name searched>"
               .format(sys.argv[0]))
         sys.exit(1)
 
@@ -33,7 +34,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute the SQL query with format
-    cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name))
+    cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
+                   .format(state_name))
 
     # Fetch all the rows
     states = cursor.fetchall()
