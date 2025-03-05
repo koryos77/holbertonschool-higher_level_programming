@@ -1,4 +1,4 @@
-#!/home/koryos/myenv/bin/python3
+#!/usr/python3
 """
 Prints all City objects from db hbtn_0e_14_usa
 """
