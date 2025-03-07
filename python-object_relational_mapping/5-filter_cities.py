@@ -34,13 +34,13 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute SQL Query
-    query = ("""
-    SELECT cities.name
-    FROM cities
-    JOIN states ON cities.state_id = states.id
-    WHERE states.name = %s
-    ORDER BY cities.id ASC
-    """)
+    query = """
+        SELECT cities.name
+        FROM cities
+        JOIN states ON cities.state_id = states.id
+        WHERE states.name = %s
+        ORDER BY cities.id ASC
+        """
     cursor.execute(query, (state_name,))
 
     # Fetch all rows
