@@ -42,7 +42,10 @@ if __name__ == "__main__":
 
     # Print result
     for city, state in cities:
-        print(f"{state.name}: ({city.id}) {city.name}")
+        print("{}: ({}) {}".format(
+            state.name,
+            city,id,
+            city.name))
 
     # Close session
     session.close()
