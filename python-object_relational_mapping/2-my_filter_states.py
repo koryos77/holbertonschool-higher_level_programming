@@ -34,8 +34,9 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute the SQL query with format
-    cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
-                   .format(state_name))
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
+    query = query.format(state_name)
+    cursor.execute(query)
 
     # Fetch all the rows
     states = cursor.fetchall()
