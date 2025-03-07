@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     # Execute the SQL query with format
     query = """
-    SELECT * FROM states WHERE name = '{}' ORDER BY id ASC
+    SELECT * FROM states WHERE name LIKE BINARY'{}' ORDER BY states.id ASC
     """
     query = query.format(state_name)
     cursor.execute(query)
