@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 """
-Script that takes in an argument and displays all values
-in the states table of hbtn_0e_0_usa where name matches the argument
+This script connects to a MySQL database and retrieves all states
+from the `states` table where the name matches the given argument,
+ordered by `id` in ascending order.
 """
+
+
 import sys
 import MySQLdb
 
-
+# Make sure the script runs only if executed correctly
 if __name__ == "__main__":
     # Verification of all required arguments
     if len(sys.argv) != 5:
@@ -48,4 +51,6 @@ if __name__ == "__main__":
 
     # Close cursor and database connection
     cursor.close()
+
+    # CLose the database
     db.close()
