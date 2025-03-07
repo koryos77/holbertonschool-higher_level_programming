@@ -32,14 +32,15 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute SQL Query to filter states beginning with N
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
 
     # Fetch all rows
     rows = cursor.fetchall()
 
     # Print result
     for row in rows:
-        print(row)
+        if row[1].startswith("N"):
+            print(row)
 
     # Close cursor and database
     cursor.close()
