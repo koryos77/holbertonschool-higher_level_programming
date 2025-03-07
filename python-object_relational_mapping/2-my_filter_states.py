@@ -13,8 +13,8 @@ import MySQLdb
 if __name__ == "__main__":
     # Verification of all required arguments
     if len(sys.argv) != 5:
-        print("Usage: {} <mysql username> <mysql password> <database name>\
-              <state name>".format(sys.argv[0]))
+        print("Usage: {} <mysql username> <mysql password> <database name>"
+              .format(sys.argv[0]))
         sys.exit(1)
 
     # Command line args
