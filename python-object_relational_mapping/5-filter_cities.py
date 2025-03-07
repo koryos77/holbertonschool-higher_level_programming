@@ -47,9 +47,7 @@ if __name__ == "__main__":
     rows = cursor.fetchall()
 
     # Print result
-    if rows:
-        city_name = [row[0] for row in rows]
-        print(", ".join(city_name))
+    print(", ".join([row[0] for row in rows]))
 
     # Close cursor and database
     cursor.close()
