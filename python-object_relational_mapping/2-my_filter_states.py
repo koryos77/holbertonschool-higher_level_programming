@@ -7,45 +7,48 @@ import sys
 import MySQLdb
 
 
+# Ensures the script runs only if executed directly
 if __name__ == "__main__":
-    # Verification of all required arguments
-    if len(sys.argv) != 5:
-        print("Usage: {} <mysql username> <mysql password> <database name>\
-              <state name>".format(sys.argv[0]))
+    # Check if the correct number of arguments is provided
+    if len(sys.argv) != 4:
+        print("Usage: {} <mysql username> <mysql password> <database name>"
+              .format(sys.argv[0]))
         sys.exit(1)
 
-    # Command line args
+    # Retrieve command-line arguments.
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    state_name = sys.argv[4]
+    state_name = sys.argv[4]  # The state name to search for
 
-    # Connection to MySQL Server
+    # Establish a connection to the MySQL database
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
         user=username,
         passwd=password,
-        db=database
+        db=database,
     )
 
-    # Creating Cursor
+    # Create a cursor object to execute SQL queries
     cursor = db.cursor()
 
-    # Execute the SQL query with format
+    # Execute the SQL query
     query = """
-    SELECT * FROM states WHERE name = '{}' ORDER BY id ASC
+    SELECT * FROM states WHERE name LIKE BINARY'{}' ORDER BY states.id ASC
     """
     query = query.format(state_name)
     cursor.execute(query)
 
-    # Fetch all the rows
-    states = cursor.fetchall()
+    # Fetch all results from the executed query
+    results = cursor.fetchall()
 
-    # Display the results
-    for state in states:
-        print(state)
+    # Print each row in the result set
+    for row in results:
+        print(row)
 
-    # Close cursor and database connection
+    # Close the cursor after execution
     cursor.close()
+
+    # Close the database connection
     db.close()
