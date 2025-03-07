@@ -11,8 +11,7 @@ if __name__ == "__main__":
     # Verification of all required arguments
     if len(sys.argv) != 5:
         print("Usage: {} <mysql username> <mysql password> <database name>\
-              <state name searched>"
-              .format(sys.argv[0]))
+              <state name>".format(sys.argv[0]))
         sys.exit(1)
 
     # Command line args
@@ -34,7 +33,9 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute the SQL query with format
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
+    query = """
+    SELECT * FROM states WHERE name = '{}' ORDER BY id ASC
+    """
     query = query.format(state_name)
     cursor.execute(query)
 
